@@ -1,0 +1,24 @@
+.navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: black;
+    padding: 20px;
+}
+.navbar li {
+    list-style-type: none;
+    font-size: 175%;
+}
+.navbar a {
+    text-decoration: none;
+    color:whitesmoke ;
+}
+.navbar a:hover {
+    color: skyblue;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+}

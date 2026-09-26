@@ -1,0 +1,115 @@
+body {
+    background-image: url(../images/background-port.jpg);
+}
+h1 {
+    font-size: 150%;
+}
+.project-link {
+    text-decoration: none;
+}
+.project-link:visited {
+    color:gray;
+}
+.project-link:hover {
+    color:slateblue;
+}
+#container-port1 {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 2px;
+
+    text-align: center;
+    column-gap: 16px;
+}
+#container-port1 p{
+    max-width:320px;
+    box-sizing: border-box;
+    margin: 2px auto;
+}
+#go-to-port ul {
+    display:flex;
+    row-gap:  16px;
+    column-gap: 16px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 6px;
+    padding: 10px 2px;
+    justify-content: space-evenly;
+}
+#go-to-port li {
+    display: flex;
+    width:320px;
+    list-style: none;
+    background-color: transparent;
+    justify-content: center;
+}
+#go-to-port li a:hover {
+    background-color: azure;
+    color:black;
+}
+#go-to-port li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 5px 15px 10px 15px;
+    display: block;
+    background-color: darkgrey;
+}
+.photo-port {
+    width: 320px;
+}
+@media screen and (max-width: 1024px) {
+    #go-to-port ul {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        row-gap: 10px;
+        justify-content: space-evenly;
+    }
+    #container-port1 {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: repeat(3, auto);        
+    }
+    #idpro5 {
+        grid-column: 1/3;
+        text-align: center;
+        justify-self: center;
+    }
+    #pro5 {
+        grid-column: 1/3;
+        text-align: center;
+        justify-self: center;
+    }
+}
+@media screen and (max-width: 768px) {
+    #go-to-port ul {
+        width:auto;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(5, auto);
+        justify-content: center;
+    }
+
+    #container-port1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);    
+        text-align: center;    
+    }
+    #idpro5 {
+        grid-column: 1/2
+    }
+    #pro5 {
+        grid-column: 1/2
+    }
+    .photo-port {
+        width: calc(80% - 50px);
+    }
+    #containerport-1 p {
+        max-width: calc(80% - 50px);
+    }
+    
+}
