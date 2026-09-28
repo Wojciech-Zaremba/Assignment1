@@ -1,6 +1,7 @@
 body {
     background-image: url(../images/background-about.jpg);
 }
+/* default layout with 4 columns and text at the bottom */
 #about-main {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -9,15 +10,18 @@ body {
     padding: 10px;
     text-align: center;
 }
+/* aligning paragraph in the grid */
 #main-paragraph {
     grid-column-start: 1;
     grid-column-end: 5;
 }
+/* setting max photo size to prevent unwanted behavior at higher pixel widths */
 .photo {
     height: 250px;
     width: auto;
 }
-@media screen and (max-width: 1024px) and (min-width: 768px) {   
+/* tablet view, switching to a 2 column grid display, and placing main paragraph on top */
+@media screen and (max-width: 1024px) and (min-width: 769px) {   
     #about-main {
         display: grid;
         grid-template-columns: auto auto;
@@ -32,7 +36,8 @@ body {
         width: 335px;
         height: auto;
 }
-}    
+}
+/* switching to 1 column view to allow easier mobile viewing, main paragraph still moved to the top */     
 @media screen and (max-width: 768px) {
     #about-main {
         display: grid;
@@ -45,15 +50,16 @@ body {
         grid-column-end: 2;    
     }
     .photo {
-        width: 335px;
+        width: calc(70% - 20px);
         height: auto;
-}
-}    
-@media screen and (max-width: 375px) {
-    .photo {
-        width: calc(100% - 20px);
     }
+}
+/* auto adjusting images to max size in one column, and removing some text from main paragraph to reduce amount of content */    
+@media screen and (max-width: 375px) {
     #long-paragraph {
         display: none;
+    }
+    .photo {
+        width: calc(100% - 40px);
     }
 }

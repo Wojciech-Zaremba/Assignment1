@@ -3,12 +3,15 @@
 
 <head>
     <meta charset="utf-8">
+    <!-- ensure proper scaling on mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> about me </title>
+    <!-- external style sheets for the page and header and footer element-->
     <link href="css/about-me-style.css" type="text/css" rel="stylesheet" />
     <link href="css/header.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
+    <!-- navbar across all pages -->
     <nav class="navbar">
         <ul>
             <li><a href="index.html" >About Me</a></li>
@@ -16,7 +19,9 @@
             <li><a href="portfolio.html">Portfolio</a></li>
         </ul>
     </nav>
+    <!-- main container for page content -->
     <div id="about-main">
+        <!-- photo + paragraph elements -->
         <div>
             <img class="photo" src="images/zdj-aboutme-1.jpg" alt="" title="">
             <p>Unwinding after a day at work</p>
@@ -33,13 +38,16 @@
             <img class="photo" src="images/zdj-aboutme-4.jpg" alt="" title="">
             <p>My plant collection at home</p>
         </div>
+        <!-- main paragraph in a separate div for easier styling -->
         <div id="main-paragraph">
         <p>Hi, I'm Wojtek! Originally from Warsaw, Poland, I recently moved to Denmark to study at VIA. I'm passionate about web development and enjoy learning how to create clean, responsive digital projects.</p>            
+        <!-- additional content shown conditionally -->
         <p id="long-paragraph">Outside of my studies, you'll usually find me getting involved at my local volunteer spot, unwinding after work with friends, or taking care of my ever-growing collection of plants.</p>
         </div>        
     </div>
+    <!-- footer consistent across all pages -->
     <div id="feetDiv">
-        <p id="feet">&copy Wojciech Zaremba</p>
+        <p id="feet">&copy; Wojciech Zaremba</p>
     </div>
     
 </body>

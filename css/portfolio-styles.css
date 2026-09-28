@@ -1,9 +1,11 @@
 body {
     background-image: url(../images/background-port.jpg);
 }
+/*adjusting header size*/
 h1 {
     font-size: 150%;
 }
+/*link to project pages styling*/
 .project-link {
     text-decoration: none;
 }
@@ -13,13 +15,13 @@ h1 {
 .project-link:hover {
     color:slateblue;
 }
+/*creating main flexbox for positioning content*/
 #container-port1 {
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 2px;
-
     text-align: center;
     column-gap: 16px;
 }
@@ -28,41 +30,43 @@ h1 {
     box-sizing: border-box;
     margin: 2px auto;
 }
+/*creating a flexbox for the jump to buttons so their position reflects project layout underneath*/
 #go-to-port ul {
     display:flex;
-    row-gap:  16px;
-    column-gap: 16px;
+    gap:  16px;
     flex-wrap: wrap;
     flex-direction: row;
     margin: 6px;
     padding: 10px 2px;
     justify-content: space-evenly;
+    list-style: none;
 }
 #go-to-port li {
-    display: flex;
     width:320px;
-    list-style: none;
     background-color: transparent;
     justify-content: center;
+    text-align: center;
 }
 #go-to-port li a:hover {
     background-color: azure;
     color:black;
 }
 #go-to-port li a {
-    display: inline-block;
+    display: block;
     text-decoration: none;
     color: white;
     padding: 5px 15px 10px 15px;
-    display: block;
     background-color: darkgrey;
 }
+/*setting constant size on images to allow flex-wrap instead of stretching*/
 .photo-port {
     width: 320px;
 }
+/*making shorter descriptions hidden on big screens*/
 .shortDesc {
     display: none;
 }
+/*switching to grid for a more controlled layout on smaller device*/
 @media screen and (min-width:769px) and (max-width: 1024px) {
     #go-to-port ul {
         display: grid;
@@ -87,7 +91,8 @@ h1 {
         justify-self: center;
     }
 }
-@media screen and (min-width:376px) and (max-width: 768px) {
+/*adjusting grid to look better on small devices as a single column*/
+@media screen and (max-width: 768px) {
     #go-to-port ul {
         width:auto;
         display: grid;
@@ -103,18 +108,19 @@ h1 {
         text-align: center;    
     }
     #idpro5 {
-        grid-column: 1/2
+        grid-column: 1/2;
     }
     #pro5 {
-        grid-column: 1/2
+        grid-column: 1/2;
     }
     .photo-port {
         width: calc(80% - 50px);
     }
-    #containerport-1 p {
+    #container-port1 p {
         max-width: calc(80% - 50px);
     }
 }
+/*adjusting descriptions for a more readable experience on tiny devices*/
 @media screen and (max-width: 375px) {
 .description {
     display: none;

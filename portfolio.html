@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="utf-8">
+    <!-- ensure proper scaling on mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> portfolio </title>
+    <!-- external style sheets for the page and header and footer element-->
     <link href="css/header.css" type="text/css" rel="stylesheet" />
     <link href="css/portfolio-styles.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
+    <!-- navbar across all pages -->
     <nav class="navbar">
         <ul>
             <li><a href="index.html">About Me</a></li>
@@ -17,6 +20,7 @@
             <li><a href="portfolio.html">Portfolio</a></li>
         </ul>
     </nav>
+    <!-- jump-to buttons for all projects-->
     <div id="go-to-port">
         <ul>
             <li><a href="#pro1">Green Thumb Care Guide</a></li>
@@ -26,12 +30,14 @@
             <li id="idpro5"><a href="#pro5">Minimal Study Planner</a> </li>
         </ul>
     </div>
+    <!-- main portfolio container for easier styling using flex/grid-->
     <div id="container-port1">
         <div id="pro1">
             <h1>Green Thumb Care Guide</h1>
             <img class="photo-port" src="images/port-pro1.jpg" title="" alt="">
             <p class="description">A responsive web guide helping plant enthusiasts track watering schedules, light
                 levels, and care tips for indoor plants.</p>
+            <!--each porject containes a short and full description, visible depending on screen width-->
             <p class="shortDesc">A responsive web guide for watering schedules, light needs, and care routines.</p>
             <p class="tech-stack">Technologies: HTML5, CSS Grid, Flexbox</p>
             <a class="project-link" href="https://en.wikipedia.org/wiki/Placeholder" target="_blank">View Project</a>
@@ -74,8 +80,9 @@
             <a class="project-link" href="https://en.wikipedia.org/wiki/Placeholder" target="_blank">View Project</a>
         </div>
     </div>
+    <!-- universal footer -->
     <div id="feetDiv">
-        <p id="feet">&copy Wojciech Zaremba</p>
+        <p id="feet">&copy; Wojciech Zaremba</p>
     </div>
 </body>
 

@@ -1,3 +1,4 @@
+/*creating flexbox in navbar for easier adjustment*/
 .navbar ul {
     display: flex;
     flex-wrap: wrap;
@@ -13,17 +14,17 @@
     text-decoration: none;
     color:whitesmoke ;
 }
+/*adding hbover effects*/
 .navbar a:hover {
     color: skyblue;
 }
-
+/* adjusting navbar look on smaller devices*/
 @media screen and (max-width: 768px) {
     .navbar ul {
         flex-direction: column;
     }
 }
+/* setting footer in bottom left always*/
 #feetDiv {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    position: static;
 }

@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="utf-8">
+    <!-- ensure proper scaling on mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> cv </title>
+    <!-- external style sheets for the page and header and footer element-->
     <link href="css/header.css" type="text/css" rel="stylesheet" />
     <link href="css/cv-styls.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
+    <!-- navbar across all pages -->
     <nav class="navbar" id="navcv">
         <ul>
             <li><a href="index.html">About Me</a></li>
@@ -17,6 +20,7 @@
             <li><a href="portfolio.html">Portfolio</a></li>
         </ul>
     </nav>
+    <!-- cv specific navigation, hidden unless width<=375 -->
     <div id="go-to">
         <ul>
             <li><a href="#title">title</a></li>
@@ -29,6 +33,7 @@
             <li><a href="#interests">interests</a></li>
         </ul>
     </div>
+    <!-- main container for cv content , contains different sections and a photo -->
     <div id="container-cv">
         <div><img id="cv-photo" src="images/zdj-cv.jpg" alt="" title=""></div>
         <div id="title">
@@ -110,8 +115,9 @@
             </ul>
         </div>
     </div>
+    <!-- universal footer -->
     <div id="feetDiv">
-        <p id="feet">&copy Wojciech Zaremba</p>
+        <p id="feet">&copy; Wojciech Zaremba</p>
     </div>
 </body>
 

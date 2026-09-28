@@ -2,6 +2,7 @@ body {
     padding: 10px;
     background-color: whitesmoke;
 }
+/* setting up grid for big screens */
 #container-cv {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -9,29 +10,34 @@ body {
     text-align: center;
     justify-items: center;
 }
+/*adjusting how unordered lists work inside the cv */
 .list-cv {
     list-style: none;
     padding: 0;
 }
+/*adjusting photo*/
 #cv-photo {
     width: 50%;
     height: auto;
 }
+/*reserving more space for work experience section*/
 #work-exp {
     grid-row-start: 4;
     grid-row-end: 6;
     grid-column-start: 2;
 }
+/*hiding navigation panel until screen is small enough*/
 #go-to {
     display: none;
 }
+/*adjusting font size for headers used as titles for sections*/
 h2 {
     font-size: 2rem;
 }
+/*creating grid for navigation section, adding visual effects*/
 #go-to ul {
     display:grid;
     grid-template-columns: auto;
-    grid-template-rows: auto;
     background-color:whitesmoke ;
     padding: 10px;
     justify-content: left;
@@ -53,36 +59,35 @@ h2 {
 #go-to li:hover a{
     color: black;
 }
+/*manually adjusting title font sizes*/
 #title h1 {
     font-size: 300%;
 }
-#title h2,
-       h3 {
+#title h2{
     font-size: 150%;
 }
-@media screen and (max-width: 1024px) {
+/*switching to a 50 50 divide for cv elements under 1024px*/
+@media screen and (min-width: 769px)and (max-width: 1024px) {
     #container-cv {
-        display: grid;
         grid-template-columns: 1fr 1fr;
     }
 }
+/* switching to a single column layout, adjusting photo size and repositioning the work experience section*/
 @media screen and (max-width: 768px) {
     #container-cv {
-        display: grid;
         grid-template-columns: auto;
         grid-template-rows: repeat(10, auto);
     }
     #work-exp {
-    grid-row-start: 8;
-    grid-row-end: 9;
-    grid-column-start: 1;
-    grid-column-end: 2 ;
+    grid-row: 8 / 9;
+    grid-column: 1 / 2;
 }
     #cv-photo{
         width: calc(100% - 20px);
         max-width: 342px;
     }
 }
+/* adding navigation buttons and improving readability */
 @media screen and (max-width: 375px) {
     body {
         font-size: 75%;
