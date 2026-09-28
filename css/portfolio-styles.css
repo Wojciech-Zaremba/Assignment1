@@ -60,7 +60,10 @@ h1 {
 .photo-port {
     width: 320px;
 }
-@media screen and (max-width: 1024px) {
+.shortDesc {
+    display: none;
+}
+@media screen and (min-width:769px) and (max-width: 1024px) {
     #go-to-port ul {
         display: grid;
         grid-template-columns: auto auto;
@@ -84,7 +87,7 @@ h1 {
         justify-self: center;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width:376px) and (max-width: 768px) {
     #go-to-port ul {
         width:auto;
         display: grid;
@@ -111,5 +114,17 @@ h1 {
     #containerport-1 p {
         max-width: calc(80% - 50px);
     }
-    
+}
+@media screen and (max-width: 375px) {
+.description {
+    display: none;
+}
+.shortDesc {
+    display: block;
+    font-weight: bold;
+    color:darkslategrey
+}
+.photo-port {
+        width: calc(80% - 50px);
+    }
 }
